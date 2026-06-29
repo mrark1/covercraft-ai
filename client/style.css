@@ -1,0 +1,280 @@
+/* =====================================================
+   CoverCraft AI
+   Premium SaaS UI
+   Developed By: ARPIT RAJ KATIYAR
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#6366f1;
+    --secondary:#8b5cf6;
+    --accent:#06b6d4;
+    --success:#10b981;
+    --danger:#ef4444;
+    --white:#ffffff;
+    --text:#1e293b;
+    --glass:rgba(255,255,255,.18);
+    --border:rgba(255,255,255,.30);
+    --shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#06b6d4);
+    background-size:400% 400%;
+    animation:bgAnimation 15s ease infinite;
+    overflow-x:hidden;
+    color:var(--text);
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    backdrop-filter:blur(6px);
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:40px auto;
+}
+
+/* Header */
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+    color:#fff;
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.1rem;
+    opacity:.9;
+}
+
+/* Glass Card */
+
+.glass-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:22px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:var(--shadow);
+}
+
+/* Form */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    color:#fff;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea{
+    border:none;
+    outline:none;
+    padding:15px;
+    border-radius:14px;
+    font-size:15px;
+    resize:none;
+    background:rgba(255,255,255,.9);
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* File Input */
+
+input[type=file]{
+    cursor:pointer;
+}
+
+/* Buttons */
+
+.button-group{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    padding:14px 22px;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#generateBtn{
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    color:#fff;
+}
+
+#generateBtn:hover{
+    transform:translateY(-3px);
+}
+
+#clearBtn{
+    background:#ef4444;
+    color:#fff;
+}
+
+#copyBtn{
+    background:#10b981;
+    color:#fff;
+}
+
+#downloadBtn{
+    background:#f59e0b;
+    color:#fff;
+}
+
+button:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+/* Output */
+
+.output-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.output-header h2{
+    color:#fff;
+}
+
+.output{
+    min-height:320px;
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    line-height:1.8;
+    font-size:16px;
+    white-space:pre-wrap;
+}
+
+/* Loading */
+
+.loading{
+    text-align:center;
+    margin:25px 0;
+    color:#fff;
+}
+
+.spinner{
+    width:65px;
+    height:65px;
+    margin:auto;
+    border:6px solid rgba(255,255,255,.3);
+    border-top:6px solid #fff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.hidden{
+    display:none;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    color:#fff;
+    margin-top:25px;
+    font-size:16px;
+}
+
+footer strong{
+    color:#facc15;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.output-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+    font-size:2.2rem;
+}
+
+.button-group{
+    flex-direction:column;
+}
+
+button{
+    width:100%;
+}
+
+.glass-card{
+    padding:20px;
+}
+
+.container{
+    width:95%;
+}
+
+}
