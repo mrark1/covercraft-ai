@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(cors({
+    origin: "https://covercraft-ai-delta.vercel.app"
+}));
+
 const coverLetterRoutes = require("./routes/coverLetter");
 
 app.use("/api/generate", coverLetterRoutes);
