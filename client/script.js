@@ -5,7 +5,7 @@
 // ==========================================================
 
 // Backend URL
-const API_URL = "https://covercraft-ai-api.onrender.com/";
+const API_URL = "https://covercraft-ai-api.onrender.com/api/generate";
 
 // Elements
 const nameInput = document.getElementById("name");
