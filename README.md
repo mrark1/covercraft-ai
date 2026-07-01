@@ -182,10 +182,24 @@ client/assets/screenshots/
 Suggested screenshots:
 
 * Home Screen
-* Generated Cover Letter
+ ![Home Screen](image.png)
+
+* Generated Cover Letter  
+![Generating Cover Letter](image-1.png)
+![Generated Cover Letter](image-2.png)
+
 * Resume Upload
+![Resume Upload](image-3.png)
+
 * PDF Download
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+
 * Mobile View
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
 
 ---
 
@@ -220,3 +234,6 @@ Developed as part of Prodesk IT Internship - Sprint 04
 ### 📄 License
 
 This project is created for educational and internship purposes.
+
+## Live Deploymemnmt 
+<https://covercraft-ai-delta.vercel.app/>
